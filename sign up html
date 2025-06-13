@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kindergarten Registration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  
+<body>
+
+  <div class="container">
+    <div class="left-panel">
+      <img src="https://cdn-icons-png.flaticon.com/512/4825/4825038.png" alt="Kids" />
+      <p>Growing minds start here.</p>
+    </div>
+
+    <div class="right-panel">
+      <h2>Create Account</h2>
+      <form>
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter full name">
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter email">
+
+        <div class="form-row">
+          <div style="flex:1">
+            <label>Role</label>
+            <select>
+              <option>Teacher</option>
+              <option>Parent</option>
+              <option>Admin</option>
+            </select>
+          </div>
+          <div style="flex:1">
+            <label>Phone Number</label>
+            <input type="text" placeholder="Phone number">
+          </div>
+        </div>
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter password">
+
+        <label>Confirm Password</label>
+        <input type="password" placeholder="Confirm password">
+
+        <button type="submit">Create Account</button>
+        <div class="login-link">
+          Already have an account? <a href="#">Log in</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
