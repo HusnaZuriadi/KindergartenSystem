@@ -75,7 +75,7 @@ public class teacherDAO {
 				con = ConnectionManager.getConnection();
 
 				//3. create statement
-				sql = "UPDATE teach SET teacherName=?,teacherEmail=?,teacherPass=?,teacherPhone=?,  teacherRole=?, teacherType=?, adminId=?  WHERE teacherId=?";
+				sql = "UPDATE teacher SET teacherName=?,teacherEmail=?,teacherPass=?,teacherPhone=?,  teacherRole=?, teacherType=?, adminId=?  WHERE teacherId=?";
 				ps = con.prepareStatement(sql);
 
 				//get values from teacher object and set parameter values
@@ -141,7 +141,7 @@ public class teacherDAO {
 			teacher teach = new teacher();
 			try {
 				con = ConnectionManager.getConnection();
-				sql = "SELECT * FROM teach WHERE teacherId = ?";
+				sql = "SELECT * FROM teacher WHERE teacherId = ?";
 				ps = con.prepareStatement(sql);
 				ps.setInt(1, teacherId);
 				rs = ps.executeQuery();
