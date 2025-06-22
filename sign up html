@@ -1,57 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kindergarten Registration</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  </head>
-  
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kindergarten Registration</title>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="signUp.css" />
+</head>
+
 <body>
 
-  <div class="container">
-    <div class="left-panel">
-      <img src="https://cdn-icons-png.flaticon.com/512/4825/4825038.png" alt="Kids" />
-      <p>Growing minds start here.</p>
-    </div>
+	<div class="container">
+		<div class="left-panel">
+			<img src="images/sign up.png" alt="Kids" />
+		</div>
 
-    <div class="right-panel">
-      <h2>Create Account</h2>
-      <form>
-        <label>Full Name</label>
-        <input type="text" placeholder="Enter full name">
+		<div class="right-panel">
+			<h2>Create Account</h2>
+<form action="CreateAccTController" method="post" onsubmit="return validateForm()">
+				<label>Full Name</label> <input type="text" name="name"
+					placeholder="Full name"> <label>Email</label> <input
+					type="email" name="email" placeholder="abc@gmail.com">
 
-        <label>Email</label>
-        <input type="email" placeholder="Enter email">
+				<div class="row1">
+					<div class="role">
+						<label>Role</label><br>
+						<!-- Add ID for role select and password fields -->
+						<select id="roleSelect" name="role" onchange="showTeacherType()"
+							required>
+							<option value="">Select Role</option>
+							<option value="Teacher">Teacher</option>
+							<option value="Admin">Admin</option>
+						</select>
 
-        <div class="form-row">
-          <div style="flex:1">
-            <label>Role</label>
-            <select>
-              <option>Teacher</option>
-              <option>Parent</option>
-              <option>Admin</option>
-            </select>
-          </div>
-          <div style="flex:1">
-            <label>Phone Number</label>
-            <input type="text" placeholder="Phone number">
-          </div>
-        </div>
+					</div>
+					<div>
+						<label>Phone Number</label><br> <input type="text"
+							name="phone" placeholder="Phone number">
+					</div>
+				</div>
+				<div id="teacherType" class="hidden">
+					<label>Teacher Type</label> <br> <select name="teacherType">
+						<option value="">Select Type</option>
+						<option value="FullTime">Full-Time</option>
+						<option value="PartTime">Part-Time</option>
+					</select>
+				</div>
 
-        <label>Password</label>
-        <input type="password" placeholder="Enter password">
+				<label>Password</label> <input type="password" id="password"
+					name="password" placeholder="Enter password"> <label>Confirm
+					Password</label> <input type="password" id="confirmPassword"
+					placeholder="Confirm password" required>
+				<button type="submit">Create Account</button>
 
-        <label>Confirm Password</label>
-        <input type="password" placeholder="Confirm password">
-
-        <button type="submit">Create Account</button>
-        <div class="login-link">
-          Already have an account? <a href="#">Log in</a>
-        </div>
-      </form>
-    </div>
-  </div>
-
+				<div class="login">
+					Already have an account? <a href="#">Log in</a>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="js/createAcct.js"></script>
 </body>
 </html>
