@@ -1,116 +1,134 @@
- <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+@charset "UTF-8";
 
-    body {
-      background: linear-gradient(to right, #d1bfa3, #f3ede3);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+@import
+	url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap")
+	;
 
-    .container {
-      background: #fff;
-      border-radius: 30px;
-      width: 90%;
-      max-width: 1000px;
-      height: 600px;
-      display: flex;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-    }
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
 
-    .left-panel {
-      flex: 1;
-      background: #f8f1e9;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 40px;
-      text-align: center;
-    }
+body {
+	background: linear-gradient(to right, #d1bfa3, #f3ede3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
 
-    .left-panel img {
-      max-width: 100%;
-      height: 350px;
-    }
+.container {
+	background: #fff;
+	border-radius: 30px;
+	width: 90%;
+	max-width: 1000px;
+	height: 600px;
+	display: flex;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
 
-    .left-panel p {
-      margin-top: 20px;
-      font-size: 20px;
-      font-weight: 600;
-    }
+.left-panel {
+	flex: 1;
+	background: #f8f1e9;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 40px;
+	text-align: center;
+}
 
-    .right-panel {
-      flex: 1;
-      padding: 40px;
-      background: linear-gradient(to bottom, #fdfcfb, #ece9e6);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+.left-panel img {
+	max-width: 120%;
+	height: 150%;
+	object-fit: cover;
+}
 
-    .right-panel h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-      font-weight: 700;
-    }
+.left-panel p {
+	margin-top: 20px;
+	font-size: 20px;
+	font-weight: 600;
+}
 
-    form {
-      display: flex;
-      flex-direction: column;
-    }
+.right-panel {
+	flex: 1;
+	padding: 50px 40px;
+	background: linear-gradient(to bottom, #fdfcfb, #ece9e6);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 
-    label {
-      margin-top: 10px;
-      font-size: 14px;
-      font-weight: 500;
-    }
+.right-panel h2 {
+	font-size: 28px;
+	margin-bottom: 20px;
+	font-weight: 700;
+	top: -70px;
+	position: relative;
+	text-align: center;
+}
 
-    input, select {
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 14px;
-    }
+form {
+	display: flex;
+	flex-direction: column;
+	margin-top: -40px;
+}
 
-    .form-row {
-      display: flex;
-      gap: 10px;
-    }
+label {
+	margin-top: 10px;
+	font-size: 14px;
+	font-weight: 500;
+}
 
-    button {
-      margin-top: 20px;
-      padding: 12px;
-      background-color: #2ecc71;
-      border: none;
-      border-radius: 10px;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+.roles {
+	font-size: 0.95rem;
+	font-weight: 400;
+	color: #151111;
+	margin-right: 5px;
+	text-align: center;
+}
 
-    button:hover {
-      background-color: #27ae60;
-    }
+.roles input[type="radio"] {
+	margin-right: 6px;
+	margin-left: 6px;
+	font-size: 0.95rem;
+}
 
-    .login-link {
-      margin-top: 10px;
-      font-size: 13px;
-      text-align: center;
-    }
+input {
+	padding: 10px;
+	margin-top: 5px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	font-size: 14px;
+}
 
-    .login-link a {
-      text-decoration: none;
-      color: #2980b9;
-      font-weight: 600;
-    }
-  </style>
+button {
+	margin-top: 20px;
+	padding: 12px;
+	background-color: #2ecc71;
+	border: none;
+	border-radius: 10px;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+button:hover {
+	background-color: #27ae60;
+}
+
+.register-link {
+	margin-top: 10px;
+	font-size: 13px;
+	text-align: center;
+}
+
+.register-link a {
+	text-decoration: none;
+	color: #2980b9;
+	font-weight: 600;
+}
